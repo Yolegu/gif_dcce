@@ -2,439 +2,492 @@
 <head>
     <meta charset="UTF-8">
     <style>
+
+        html, body {
+            margin: 0;
+            height: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            z-index: 0;
+            flex: 0 64px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        app {
+            flex: 1;
+            display:flex;
+            overflow: auto;
+            flex-wrap: wrap;
+        }
+
+        article {
+            flex: 1;
+            order: 1;
+            overflow: auto;
+        }
+
         p, h1, h2 {
             text-align: center;
         }
-        nav {
-            float: left;
-            text-align: left;
-            height: 100%;
-            position: fixed;
-        }
-        nav p {
-            background-color: black;
-            color: aliceblue;
-        }
-        ul {
-            list-style:none;
-            padding-left:0;
-        }
+
         a {
             text-decoration: none;
         }
+
         .gallery {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
+
         img {
             height: 150px;
         }
+
         .advice {
             font-size: large;
             background-color: rgba(51, 204, 255, 0.3);
         }
+
+        footer {
+            border-top: black 1px solid;
+        }
+
     </style>
 </head>
 
 <body>
 
-    <!--
-    <nav>
-        <p>Menu</p>
-        <ul>
-            <li><a href="#repartition">Répartition</a></li>
-            <li><a href="#decharge">Décharge</a></li>
-        </ul>
-    </nav>
--->
+    <header>
+            <h1>GIF Me I'm DCCE</h1>
+            <!-- <nav>
+                <p><a href="#edt">Emploi du temps</a></p>
+                <p><a href="#support">Support de cours</a></p>
+                <p><a href="#preparation">Préparation du TD</a></p>
+                <p><a href="#premier TP">Préparation du TP</a></p>
+                <p><a href="#etablissement">Relation avec l'établissement</a></p>
+                <p><a href="#question">Poser une question</a></p>
+                <p><a href="#repartition">Répartition</a></p>
+                <p><a href="#surveillance">Surveillance</a></p>
+                <p><a href="#correction">Corrections</a></p>
+                <p><a href="#arche">Arche</a></p>
+                <p><a href="#reponse">Réponse</a></p>        
+                <p><a href="#materiel_exam">En attendant les copies...</a></p> 
+                <p><a href="#formation">Formations</a></p>        
+                <p><a href="#repartition">Répartition</a></p>   
+                <p><a href="#decharge">Décharge</a></p>
+                <p><a href="#encadrant">Encadrant</a></p>                
+            </nav> -->
+    </header>
 
-    <article style="margin-left: 10%; margin-right: 10%;">
+    <app>
 
-        <h1>GIF Me I'm DCCE</h1>
+        <article>
 
-        <diV id="edt">
-            <hr>
-            <h2>1. Combiner l'emploi du temps de la thèse et des cours</h2>
+            <div id="edt">
+                <hr>
+                <h2>1. Combiner l'emploi du temps de la thèse et des cours</h2>
 
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media.giphy.com/media/26xBQdPdKpXQFOx7a/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/3osxYifuN3iDPFhyRW/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media1.tenor.com/images/d511adeefd13b96824a207e55158e5eb/tenor.gif?itemid=4503156">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/PbFp1FmxteXsc/giphy.gif">
-                </div>
-            </div>
-
-            <p class="advice">Communiquer avec les deux parties (enseignement et laboratoire) en particulier si les
-                deux ne sont pas regroupés dans le même labo, pour prévoir à l'avance les créneaux de cours et
-                gérer les indisponibilités. Anticiper au maximum.</p>
-        </diV>
-
-        <div id="support">
-            <hr>
-            <h2>2. Recevoir le support de cours</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media.giphy.com/media/toma5UQ6DHndC/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/CURNwNAg5sQKs/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media.giphy.com/media/OojBiFN6e0fss/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/4W7Z6OvLeeOEU/giphy.gif">
-                </div>
-            </div>
-            <p class="advice">Demander les supports de cours dès le début d'année. Ne pas attendre que notre référent enseignant nous envoie de lui-même les supports (vous risquez d'attendre longtemps).</p>
-        </div>
-
-        <div id="preparation">
-            <hr>
-            <h2>3. La préparation du TD (- le premier td) (réunion, limites du contenu, accessibilité, explication)</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media.giphy.com/media/9vD8XxuLJPBFC/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/i15aTHQDPYA24/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media.giphy.com/media/Ef0TRTKRVGGQw/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/goa0uZn3BvAhq/giphy.gif">
-                </div>
-            </div>
-            <p class="advice">Préparer le TD en amont d'une réunion avec le référent pour avoir les bonnes questions à lui poser. Ne pas hésiter à dire au référent qu'on est pas sûr d'un point de son cours, des limites à aborder en TD, des notions attendues en lien avec l'examen final. S'y prendre à l'avance.</p>
-        </div>
-
-        <div id="premier TP">
-            <hr>
-            <h2>4. (Premier TP: suivre le TP avec un autre intervenant), TP du prof vs mon TP (changement dans les explications, manips, ...)</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media.giphy.com/media/VXY8yTfyzFrzO/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/9aM0AwLdy3zlS/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media.giphy.com/media/3ohhworAhxSEHT3zDa/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/6Bb6v35Lkckow/giphy.gif">
-                </div>
-            </div>
-            <p class="advice"> Préparer et suivre le TP en amont le référent. Ne pas hésiter à dire au référent
-                qu'on est pas sûr d'être au point avec le déroulement de la séance (expérience, protocole,
-                temps à ne pas dépasser...). S'y prendre à l'avance et à la fin ça se passe toujours bien.</p>
-        </div>
-
-        <div id="etablissement">
-            <hr>
-            <h2>5. Relation avec l'établissement</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media.giphy.com/media/l2JegHKlrPqqOjjig/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/3o84U6421OOWegpQhq/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media0.giphy.com/media/s7ZiTtSGstPna/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/3o7btRJzGGUVoXa7y8/giphy.gif">
-                </div>
-            </div>
-            <p class="advice">Demander de l'aide à un collégue qui a déjà effectué les procédures</p>
-        </div>
-
-        <div id="question">
-            <hr>
-            <h2>6. Poser une question</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media.giphy.com/media/U6DusfBTS5r68/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/l0MYBpeV7RVgmjelG/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media0.giphy.com/media/H1wHUjMxrwgb6/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/l0HlCUH4wV7L3E32E/giphy.gif">
-                </div>
-            </div>
-            <p class="advice">"Quelles sont vos questions" au lieu de "Avez-vous des questions"
-                Poser des questions ouverte
-                Demander de restituer ce qui a été vu -> peu suciter des questions</p>
-        </div>
-
-        <div id="surveillance">
-            <hr>
-            <h2>7. Surveillance d'un examen</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media.giphy.com/media/t3FM865mEfysE/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/26uf12pHJ1mTPVT2w/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media.giphy.com/media/6Do13TV1OfOF2/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/ARH12W5IVAbni/giphy.gif">
-                </div>
-            </div>
-            <p class="advice">Prévoir de petites tâches
-                Amener un bloc note te un stylo
-                Eviter de rester trop longtemps au même endroit au risque de stresser les étudiants à proximité</p>
-        </div>
-
-        <div id="correction">
-            <hr>
-            <h2>8. La Correction des Copies</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="http://78.media.tumblr.com/e1aed171ded2bd78cc8dc0e73b594eaf/tumblr_o17frv0cdu1u9u459o1_500.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="http://media.topito.com/wp-content/uploads/2015/10/tumblr_n2g8pv1HXx1tuoms4o1_500.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="http://i.imgur.com/QtSvUio.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/owWeDOqVbh4e4/giphy.gif">
-                </div>
-            </div>
-            <p class="advice">Valider le corrigé et la notation avec l'encadrant
-                Déterminer le délai de correction
-                Réserver des périodes dédiées aux corrections dans notre emploi du temps
-                Privilégier un moment où l'on ne sera pas trop dérangé
-                Ne pas s'y prendre à la dernière minute</p>
-        </div>
-
-        <div id="arche">
-            <hr>
-            <h2>9. L'utilisation de la plateforme ARCHE</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media2.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/yfntPowANF0Ig/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media.giphy.com/media/3NtY188QaxDdC/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="http://i.imgur.com/0OLDD4U.gif">
-                </div>
-            </div>
-            <p class="advice">Anticiper et se renseigner sur les possibilités de la plateforme ARCHE
-                Ne pas hésiter à s'approprier la notice d'utilisation ARCHE
-                Préparer des notes à destinations des étudiants pour leur présenter les ressources à leurs
-                dispositions et les diverses consignes (délai, rendu, objectif du cours, énoncés...)</p>
-        </div>
-
-        <div id="reponse">
-            <hr>
-            <h2>10. Nos réponses aux questions des étudiants</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="http://78.media.tumblr.com/5cb6e13fde7fad4a1ff32ddf6d539869/tumblr_inline_mis6vwXjTm1qz4rgp.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="http://78.media.tumblr.com/tumblr_m1mhojwlHW1r3wq4i.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media3.giphy.com/media/3o7qEbgQEJqlQf0wwg/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/POjKY16VsPxD2/giphy.gif">
-                </div>
-            </div>
-            <p class="advice">Ne pas hésiter à demander à l'étudiant s'il a compris notre explication, lui demander
-                de reformuler ou de l'expliquer avec ses propres mots</p>
-        </div>
-
-        <div id="materiel_exam">
-            <hr>
-            <h2>11. Attendre le matériel d'examen</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media.giphy.com/media/XkJTAG3PgrW2k/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/5ChDMPlZYIwZW/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media.giphy.com/media/OBP5KeYczcxxK/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/MJO2n6UT6LGGA/giphy.gif">
-                </div>
-            </div>
-            <p class="advice">Ne pas hésiter à demander à l'étudiant s'il a compris notre explication, lui demander
-                de reformuler ou de l'expliquer avec ses propres mots</p>
-        </div>
-
-        <div id="formation">
-            <hr>
-            <h2>12. Suivre les formations de l'école doctorale</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media.giphy.com/media/OAthVeXHlBnFK/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/XknChYwfPnp04/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media.giphy.com/media/g7tDHNGLhCrLO/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/qc1waqAag4tZC/giphy.gif">
-                </div>
-            </div>
-            <p class="advice">Développer et mettre en oeuvre des formations plus adaptées pour progresser dans
-                l'enseignement: à l'oral (ton, attitude), à l'écrit (stucture du cours, organisation).
-                Le contenu de ces formations doit être transmis aux (co-)directeurs de thèse pour qu'ils aient
-                connaissance de l'apport de ces formations à leur doctorant.</p>
-        </div>
-
-        <div id="repartition">
-            <hr>
-            <h2>13. Mauvaise répartition des étudiants dans les salles</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media.giphy.com/media/vt77XPSOtZXPi/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/xUn3Ce6l0ApzgtSOAw/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media.giphy.com/media/67tQ4947zCIQo/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/26uf7I0OKqyIpUO5O/giphy.gif">
-                </div>
-            </div>
-            <p class="advice">Avoir une liste des personnes supposées être là</p>
-        </div>
-
-        <div id="decharge">
-            <hr>
-            <h2>14. Décharge du gérant du module</h2>
-            <div class="gallery">
+                <div class="gallery">
                     <div>
                         <p class="legend">Doctorant</p>
-                        <img src="https://media.giphy.com/media/Q8FaD6GjQ97jO/giphy.gif">
+                        <img src="https://media.giphy.com/media/26xBQdPdKpXQFOx7a/giphy.gif">
                     </div>
                     <div>
                         <p class="legend">Etudiant</p>
-                        <img src="https://media.giphy.com/media/xT1R9RYgCyAoUpuPPW/giphy.gif">
+                        <img src="https://media.giphy.com/media/3osxYifuN3iDPFhyRW/giphy.gif">
                     </div>
                     <div>
                         <p class="legend">Encadrant</p>
-                        <img src="https://media.giphy.com/media/U5CtL15HGGfcI/giphy.gif">
+                        <img src="https://media1.tenor.com/images/d511adeefd13b96824a207e55158e5eb/tenor.gif?itemid=4503156">
                     </div>
                     <div>
                         <p class="legend">Réalité</p>
-                        <img src="https://media.giphy.com/media/fQZX2aoRC1Tqw/giphy.gif">
+                        <img src="https://media.giphy.com/media/PbFp1FmxteXsc/giphy.gif">
                     </div>
                 </div>
-            <p class="advice">Obtenir un maximum d'informations sur le déroulé espéré ainsi que les documents nécessaires aux cours</p>
-        </div>
 
-        <div id="encadrant">
-            <hr>
-            <h2>15. Relations avec l'encadrant</h2>
-            <div class="gallery">
-                <div>
-                    <p class="legend">Doctorant</p>
-                    <img src="https://media.giphy.com/media/l1J9CiCufdrL0JRlu/giphy.gif">
+                <p class="advice">Communiquer avec les deux parties (enseignement et laboratoire) en particulier si les
+                    deux ne sont pas regroupés dans le même labo, pour prévoir à l'avance les créneaux de cours et
+                    gérer les indisponibilités. Anticiper au maximum.</p>
+            </diV>
+
+            <div id="support">
+                <hr>
+                <h2>2. Recevoir le support de cours</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="https://media.giphy.com/media/toma5UQ6DHndC/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="https://media.giphy.com/media/CURNwNAg5sQKs/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media.giphy.com/media/OojBiFN6e0fss/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/4W7Z6OvLeeOEU/giphy.gif">
+                    </div>
                 </div>
-                <div>
-                    <p class="legend">Etudiant</p>
-                    <img src="https://media.giphy.com/media/111GaZJtUrzC4o/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Encadrant</p>
-                    <img src="https://media.giphy.com/media/3og0IzCY7KZAyaEGfm/giphy.gif">
-                </div>
-                <div>
-                    <p class="legend">Réalité</p>
-                    <img src="https://media.giphy.com/media/R459x856IfF6w/giphy.gif">
-                </div>
+                <p class="advice">Demander les supports de cours dès le début d'année. Ne pas attendre que notre référent enseignant nous envoie de lui-même les supports (vous risquez d'attendre longtemps).</p>
             </div>
-            <p class="advice">Sourire, ne pas laisser des mails sans réponses</p>
-        </div>
 
-    </article>
+            <div id="preparation">
+                <hr>
+                <h2>3. La préparation du TD (- le premier td) (réunion, limites du contenu, accessibilité, explication)</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="https://media.giphy.com/media/9vD8XxuLJPBFC/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="https://media.giphy.com/media/i15aTHQDPYA24/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media.giphy.com/media/Ef0TRTKRVGGQw/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/goa0uZn3BvAhq/giphy.gif">
+                    </div>
+                </div>
+                <p class="advice">Préparer le TD en amont d'une réunion avec le référent pour avoir les bonnes questions à lui poser. Ne pas hésiter à dire au référent qu'on est pas sûr d'un point de son cours, des limites à aborder en TD, des notions attendues en lien avec l'examen final. S'y prendre à l'avance.</p>
+            </div>
+
+            <div id="premier TP">
+                <hr>
+                <h2>4. (Premier TP: suivre le TP avec un autre intervenant), TP du prof vs mon TP (changement dans les explications, manips, ...)</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="https://media.giphy.com/media/VXY8yTfyzFrzO/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="https://media.giphy.com/media/9aM0AwLdy3zlS/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media.giphy.com/media/3ohhworAhxSEHT3zDa/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/6Bb6v35Lkckow/giphy.gif">
+                    </div>
+                </div>
+                <p class="advice"> Préparer et suivre le TP en amont le référent. Ne pas hésiter à dire au référent
+                    qu'on est pas sûr d'être au point avec le déroulement de la séance (expérience, protocole,
+                    temps à ne pas dépasser...). S'y prendre à l'avance et à la fin ça se passe toujours bien.</p>
+            </div>
+
+            <div id="etablissement">
+                <hr>
+                <h2>5. Relation avec l'établissement</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="https://media.giphy.com/media/l2JegHKlrPqqOjjig/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="https://media.giphy.com/media/3o84U6421OOWegpQhq/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media0.giphy.com/media/s7ZiTtSGstPna/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/3o7btRJzGGUVoXa7y8/giphy.gif">
+                    </div>
+                </div>
+                <p class="advice">Demander de l'aide à un collégue qui a déjà effectué les procédures</p>
+            </div>
+
+            <div id="question">
+                <hr>
+                <h2>6. Poser une question</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="https://media.giphy.com/media/U6DusfBTS5r68/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="https://media.giphy.com/media/l0MYBpeV7RVgmjelG/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media0.giphy.com/media/H1wHUjMxrwgb6/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/l0HlCUH4wV7L3E32E/giphy.gif">
+                    </div>
+                </div>
+                <p class="advice">"Quelles sont vos questions" au lieu de "Avez-vous des questions"
+                    Poser des questions ouverte
+                    Demander de restituer ce qui a été vu -> peu suciter des questions</p>
+            </div>
+
+            <div id="surveillance">
+                <hr>
+                <h2>7. Surveillance d'un examen</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="https://media.giphy.com/media/t3FM865mEfysE/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="https://media.giphy.com/media/26uf12pHJ1mTPVT2w/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media.giphy.com/media/6Do13TV1OfOF2/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/ARH12W5IVAbni/giphy.gif">
+                    </div>
+                </div>
+                <p class="advice">Prévoir de petites tâches
+                    Amener un bloc note te un stylo
+                    Eviter de rester trop longtemps au même endroit au risque de stresser les étudiants à proximité</p>
+            </div>
+
+            <div id="correction">
+                <hr>
+                <h2>8. La Correction des Copies</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="http://78.media.tumblr.com/e1aed171ded2bd78cc8dc0e73b594eaf/tumblr_o17frv0cdu1u9u459o1_500.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="http://media.topito.com/wp-content/uploads/2015/10/tumblr_n2g8pv1HXx1tuoms4o1_500.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="http://i.imgur.com/QtSvUio.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/owWeDOqVbh4e4/giphy.gif">
+                    </div>
+                </div>
+                <p class="advice">Valider le corrigé et la notation avec l'encadrant
+                    Déterminer le délai de correction
+                    Réserver des périodes dédiées aux corrections dans notre emploi du temps
+                    Privilégier un moment où l'on ne sera pas trop dérangé
+                    Ne pas s'y prendre à la dernière minute</p>
+            </div>
+
+            <div id="arche">
+                <hr>
+                <h2>9. L'utilisation de la plateforme ARCHE</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="https://media2.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="https://media.giphy.com/media/yfntPowANF0Ig/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media.giphy.com/media/3NtY188QaxDdC/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="http://i.imgur.com/0OLDD4U.gif">
+                    </div>
+                </div>
+                <p class="advice">Anticiper et se renseigner sur les possibilités de la plateforme ARCHE
+                    Ne pas hésiter à s'approprier la notice d'utilisation ARCHE
+                    Préparer des notes à destinations des étudiants pour leur présenter les ressources à leurs
+                    dispositions et les diverses consignes (délai, rendu, objectif du cours, énoncés...)</p>
+            </div>
+
+            <div id="reponse">
+                <hr>
+                <h2>10. Nos réponses aux questions des étudiants</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="http://78.media.tumblr.com/5cb6e13fde7fad4a1ff32ddf6d539869/tumblr_inline_mis6vwXjTm1qz4rgp.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="http://78.media.tumblr.com/tumblr_m1mhojwlHW1r3wq4i.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media3.giphy.com/media/3o7qEbgQEJqlQf0wwg/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/POjKY16VsPxD2/giphy.gif">
+                    </div>
+                </div>
+                <p class="advice">Ne pas hésiter à demander à l'étudiant s'il a compris notre explication, lui demander
+                    de reformuler ou de l'expliquer avec ses propres mots</p>
+            </div>
+
+            <div id="materiel_exam">
+                <hr>
+                <h2>11. Attendre le matériel d'examen</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="https://media.giphy.com/media/XkJTAG3PgrW2k/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="https://media.giphy.com/media/5ChDMPlZYIwZW/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media.giphy.com/media/OBP5KeYczcxxK/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/MJO2n6UT6LGGA/giphy.gif">
+                    </div>
+                </div>
+                <p class="advice">Ne pas hésiter à demander à l'étudiant s'il a compris notre explication, lui demander
+                    de reformuler ou de l'expliquer avec ses propres mots</p>
+            </div>
+
+            <div id="formation">
+                <hr>
+                <h2>12. Suivre les formations de l'école doctorale</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="https://media.giphy.com/media/OAthVeXHlBnFK/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="https://media.giphy.com/media/XknChYwfPnp04/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media.giphy.com/media/g7tDHNGLhCrLO/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/qc1waqAag4tZC/giphy.gif">
+                    </div>
+                </div>
+                <p class="advice">Développer et mettre en oeuvre des formations plus adaptées pour progresser dans
+                    l'enseignement: à l'oral (ton, attitude), à l'écrit (stucture du cours, organisation).
+                    Le contenu de ces formations doit être transmis aux (co-)directeurs de thèse pour qu'ils aient
+                    connaissance de l'apport de ces formations à leur doctorant.</p>
+            </div>
+
+            <div id="repartition">
+                <hr>
+                <h2>13. Mauvaise répartition des étudiants dans les salles</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="https://media.giphy.com/media/vt77XPSOtZXPi/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="https://media.giphy.com/media/xUn3Ce6l0ApzgtSOAw/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media.giphy.com/media/67tQ4947zCIQo/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/26uf7I0OKqyIpUO5O/giphy.gif">
+                    </div>
+                </div>
+                <p class="advice">Avoir une liste des personnes supposées être là</p>
+            </div>
+
+            <div id="decharge">
+                <hr>
+                <h2>14. Décharge du gérant du module</h2>
+                <div class="gallery">
+                        <div>
+                            <p class="legend">Doctorant</p>
+                            <img src="https://media.giphy.com/media/Q8FaD6GjQ97jO/giphy.gif">
+                        </div>
+                        <div>
+                            <p class="legend">Etudiant</p>
+                            <img src="https://media.giphy.com/media/xT1R9RYgCyAoUpuPPW/giphy.gif">
+                        </div>
+                        <div>
+                            <p class="legend">Encadrant</p>
+                            <img src="https://media.giphy.com/media/U5CtL15HGGfcI/giphy.gif">
+                        </div>
+                        <div>
+                            <p class="legend">Réalité</p>
+                            <img src="https://media.giphy.com/media/fQZX2aoRC1Tqw/giphy.gif">
+                        </div>
+                    </div>
+                <p class="advice">Obtenir un maximum d'informations sur le déroulé espéré ainsi que les documents nécessaires aux cours</p>
+            </div>
+
+            <div id="encadrant">
+                <hr>
+                <h2>15. Relations avec l'encadrant</h2>
+                <div class="gallery">
+                    <div>
+                        <p class="legend">Doctorant</p>
+                        <img src="https://media.giphy.com/media/l1J9CiCufdrL0JRlu/giphy.gif" title="Pourtant je les aime bien les pingouins... Eux.">
+                    </div>
+                    <div>
+                        <p class="legend">Etudiant</p>
+                        <img src="https://media.giphy.com/media/111GaZJtUrzC4o/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Encadrant</p>
+                        <img src="https://media.giphy.com/media/3og0IzCY7KZAyaEGfm/giphy.gif">
+                    </div>
+                    <div>
+                        <p class="legend">Réalité</p>
+                        <img src="https://media.giphy.com/media/R459x856IfF6w/giphy.gif" title="J'ai faim...">
+                    </div>
+                </div>
+                <p class="advice">Sourire, ne pas laisser des mails sans réponses</p>
+            </div>
+
+        </article>
+
+    </app>
+
+    <footer>
+            <p>Réalisé dans le cadre d'une formation DCCE.</p>
+    </footer>
 
 </body>
